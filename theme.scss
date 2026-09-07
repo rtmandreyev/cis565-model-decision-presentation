@@ -557,7 +557,7 @@ $font-family-sans-serif:
 
   line-height: 1;
 
-  color: var(--paper);
+  color: var(--cyan);
 }
 
 
@@ -1251,12 +1251,21 @@ $font-family-sans-serif:
   color: var(--muted);
 }
 
-
-.s9-no {
+.s9-none-group {
   position: absolute;
 
   left: 75px;
   top: 145px;
+
+  width: 520px;
+  height: 190px;
+}
+
+.s9-no {
+  position: absolute;
+
+  left: 0;
+  top: 0;
 
   font-size: 180px;
   font-weight: 750;
@@ -1271,8 +1280,8 @@ $font-family-sans-serif:
 .s9-cross {
   position: absolute;
 
-  left: 70px;
-  top: 310px;
+  left: -5px;
+  top: 165px;
 
   width: 520px;
   height: 5px;

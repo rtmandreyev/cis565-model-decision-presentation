@@ -494,11 +494,15 @@ format:
     SO WHICH MODEL WINS?
   </div>
 
-  <div class="s9-no fragment">
+    <div class="s9-none-group fragment">
+
+  <div class="s9-no">
     NONE.
   </div>
 
-  <div class="s9-cross fragment"></div>
+  <div class="s9-cross"></div>
+
+    </div>
 
   <div class="s9-reframe fragment">
     That's the wrong<br>
