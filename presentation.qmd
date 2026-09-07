@@ -53,10 +53,6 @@ format:
     <span>NO</span>
   </div>
 
-  <div class="s1-household">
-    HOUSEHOLD 1847
-  </div>
-
   <div class="s1-answer fragment">
     WE DON'T<br>KNOW.
   </div>
@@ -171,10 +167,8 @@ format:
 ```{=html}
 <div class="s4">
 
-  <div class="section-label violet">EXPLAIN</div>
-
   <div class="s4-score">82%</div>
-  <div class="s4-center-label">ONE OUTPUT</div>
+  <div class="s4-center-label">ONE MODEL OUTPUT</div>
 
   <div class="s4-prompt s4-p1 fragment">
     <div class="role-label violet">ANALYST</div>

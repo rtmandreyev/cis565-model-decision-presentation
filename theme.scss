@@ -313,26 +313,6 @@ $font-family-sans-serif:
 }
 
 
-.s1-household {
-  position: absolute;
-
-  right: 82px;
-  top: 470px;
-
-  font-family:
-    "SFMono-Regular",
-    Menlo,
-    Monaco,
-    monospace;
-
-  font-size: 12px;
-
-  letter-spacing: 1.2px;
-
-  color: var(--muted);
-}
-
-
 .s1-answer {
   position: absolute;
 
@@ -572,7 +552,7 @@ $font-family-sans-serif:
   left: 635px;
   top: 305px;
 
-  font-size: 150px;
+  font-size: 175px;
   font-weight: 650;
 
   line-height: 1;
@@ -584,7 +564,7 @@ $font-family-sans-serif:
 .s4-center-label {
   position: absolute;
 
-  left: 694px;
+  left: 675px;
   top: 455px;
 
   font-size: 11px;
