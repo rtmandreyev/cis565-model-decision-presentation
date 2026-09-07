@@ -6,10 +6,10 @@
 <script src="presentation_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="presentation_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="presentation_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="presentation_files/libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="presentation_files/libs/quarto-html/quarto-syntax-highlighting-dark-fd4a9f896cc3625b388691745afc9547.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.10.18">
 
-  <title>Predict, Explain, or Intervene?</title>
+  <title> PREDICT  EXPLAIN  INTERVENE </title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -34,7 +34,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/theme/quarto-9d30103509965cb404860eddfc4e5f8b.css">
+  <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/theme/quarto-a39fa77e608e46ca4e504467405fff2a.css">
   <link href="presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -132,7 +132,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Predict, Explain, or Intervene?</h1>
+  <h1 class="title"><p><span class="holding-title"> PREDICT<br> EXPLAIN<br> INTERVENE </span></p></h1>
+  <p class="subtitle">MODEL CHOICE FOR BUSINESS DECISIONS</p>
 
 <div class="quarto-title-authors">
 </div>
@@ -142,14 +143,12 @@
 <h2></h2>
 <div class="s1">
 
-  <div class="s1-section">PERSONALIZED PROMOTIONS</div>
+  <div class="section-label cyan">PERSONALIZED PROMOTIONS</div>
 
   <div class="s1-left">
-    <div class="s1-line">Our model says</div>
-    <div class="s1-line">this household</div>
-    <div class="s1-line">
-      will <span class="cyan">buy.</span>
-    </div>
+    <div>Our model says</div>
+    <div>this household</div>
+    <div>will <span class="cyan">buy.</span></div>
   </div>
 
   <div class="s1-score">
@@ -158,7 +157,7 @@
       predicted probability<br>
       of purchase
     </div>
-    <div class="s1-score-note">ILLUSTRATIVE</div>
+    <div class="illustrative-note">ILLUSTRATIVE SCORE</div>
   </div>
 
   <div class="s1-question">
@@ -166,12 +165,12 @@
     the coupon?
   </div>
 
-  <div class="s1-choice-row">
-    <div class="s1-choice">YES</div>
-    <div class="s1-choice">NO</div>
+  <div class="s1-options">
+    <span>YES</span>
+    <span>NO</span>
   </div>
 
-  <div class="s1-customer">
+  <div class="s1-household">
     HOUSEHOLD 1847
   </div>
 
@@ -179,13 +178,491 @@
     WE DON'T<br>KNOW.
   </div>
 
-  <div class="s1-answer-small fragment">
+  <div class="s1-answer-note fragment">
     A purchase prediction<br>
     doesn't answer that decision.
   </div>
 
-  <div class="s1-disclaimer">
+  <div class="disclaimer">
     Illustrative customer and probability — not an empirical result.
+  </div>
+
+</div>
+</section>
+<section id="section-1" class="slide level2 questions">
+<h2></h2>
+<div class="s2">
+
+  <div class="s2-intro">
+    One decision.
+  </div>
+
+  <div class="s2-q s2-q1 fragment">
+    <div class="s2-question">WILL THEY BUY?</div>
+    <div class="concept-label cyan">PREDICT</div>
+  </div>
+
+  <div class="s2-q s2-q2 fragment">
+    <div class="s2-question">WHY THIS SCORE?</div>
+    <div class="concept-label violet">EXPLAIN</div>
+  </div>
+
+  <div class="s2-q s2-q3 fragment">
+    <div class="s2-question">
+      WILL THE COUPON<br>
+      CHANGE BEHAVIOR?
+    </div>
+    <div class="concept-label magenta">INTERVENE</div>
+  </div>
+
+  <div class="s2-conclusion fragment">
+    <strong>Three</strong> analytical questions.
+  </div>
+
+</div>
+</section>
+<section id="section-2" class="slide level2 prediction">
+<h2></h2>
+<div class="s3">
+
+  <div class="section-label cyan">PREDICT</div>
+
+  <div class="s3-number">82%</div>
+
+  <div class="s3-number-label">
+    predicted probability<br>
+    of redemption
+  </div>
+
+  <div class="s3-side">
+
+    <div class="micro-label">THE BUSINESS QUESTION</div>
+
+    <div class="s3-question">
+      Who is most likely<br>
+      to redeem next cycle?
+    </div>
+
+    <div class="accent-rule cyan-bg"></div>
+
+    <div class="micro-label">THE REAL TEST</div>
+
+    <div class="s3-test">
+      Did it work on customers<br>
+      the model <span class="cyan-underline">never saw?</span>
+    </div>
+
+  </div>
+
+  <div class="s3-flow fragment">
+    <span>PAST DATA</span>
+    <span class="arrow">→</span>
+    <span>MODEL</span>
+    <span class="arrow">→</span>
+    <span>UNSEEN DATA</span>
+  </div>
+
+  <div class="s3-punch fragment">
+    Prediction succeeds <span class="cyan">out of sample.</span>
+  </div>
+
+  <div class="source">
+    SOURCE&nbsp;&nbsp; Mullainathan &amp; Spiess (2017) · <i>JEP</i> 31(2) · p. 87
+  </div>
+
+</div>
+</section>
+<section id="section-3" class="slide level2 explanation">
+<h2></h2>
+<div class="s4">
+
+  <div class="section-label violet">EXPLAIN</div>
+
+  <div class="s4-score">82%</div>
+  <div class="s4-center-label">ONE OUTPUT</div>
+
+  <div class="s4-prompt s4-p1 fragment">
+    <div class="role-label violet">ANALYST</div>
+    <div class="s4-copy">
+      What drove<br>
+      this score?
+    </div>
+  </div>
+
+  <div class="s4-prompt s4-p2 fragment">
+    <div class="role-label violet">MANAGEMENT</div>
+    <div class="s4-copy">
+      Can I understand<br>
+      and defend it?
+    </div>
+  </div>
+
+  <div class="s4-prompt s4-p3 fragment">
+    <div class="role-label violet">USER / AUDITOR</div>
+    <div class="s4-copy">
+      Why this<br>
+      outcome?
+    </div>
+  </div>
+
+  <div class="s4-conclusion fragment">
+    Different people need<br>
+    <span class="violet">different explanations.</span>
+  </div>
+
+  <div class="source">
+    SOURCE&nbsp;&nbsp; NIST AI RMF 1.0 (2023) · §3.5 · p. 16
+    &nbsp;|&nbsp; Phillips et al. (2021) · NISTIR 8312 · §2.2 · pp. 3–4
+  </div>
+
+</div>
+</section>
+<section id="section-4" class="slide level2 opacity">
+<h2></h2>
+<div class="s5">
+
+  <div class="s5-title">
+    WHEN DOES<br>
+    OPACITY MATTER?
+  </div>
+
+  <div class="s5-case s5-left">
+    <div class="case-number">01</div>
+
+    <div class="s5-case-name">
+      GROCERY<br>
+      RECOMMENDATION
+    </div>
+
+    <div class="s5-result">
+      wrong prediction
+      <span>→ less relevant product</span>
+    </div>
+  </div>
+
+  <div class="s5-case s5-right fragment">
+    <div class="case-number">02</div>
+
+    <div class="s5-case-name magenta">
+      HIGH-STAKES<br>
+      DECISION
+    </div>
+
+    <div class="s5-result">
+      opaque decision
+      <span>→ harder to scrutinize</span>
+    </div>
+  </div>
+
+  <div class="s5-spectrum fragment">
+    <div class="spectrum-left">LOWER CONSEQUENCE</div>
+    <div class="spectrum-line"></div>
+    <div class="spectrum-right">HIGHER CONSEQUENCE</div>
+  </div>
+
+  <div class="s5-takeaway fragment">
+    The question isn't simply<br>
+    <span class="crossed">BLACK BOX OR NOT?</span><br>
+    <strong>What does opacity cost here?</strong>
+  </div>
+
+  <div class="s5-rudin fragment">
+    <div class="micro-label violet">A STRONGER POSITION</div>
+    Rudin argues for inherently interpretable models
+    in high-stakes decisions.
+  </div>
+
+  <div class="source">
+    SOURCE&nbsp;&nbsp; Rudin (2019) · <i>Nature Machine Intelligence</i> 1 · pp. 206–215
+    &nbsp;|&nbsp; NIST AI RMF 1.0 (2023)
+  </div>
+
+</div>
+</section>
+<section id="section-5" class="slide level2 intervention">
+<h2></h2>
+<div class="s6">
+
+  <div class="s6-predict cyan">
+    LIKELY<br>
+    TO BUY
+  </div>
+
+  <div class="s6-not-equal fragment">≠</div>
+
+  <div class="s6-intervene fragment">
+    LIKELY TO BE<br>
+    <span class="magenta">PERSUADED</span>
+  </div>
+
+  <div class="s6-example s6-a fragment">
+    <div class="customer-label">CUSTOMER A</div>
+    <div class="s6-prob cyan">90%</div>
+    <div class="s6-desc">likely to buy</div>
+    <div class="s6-outcome">buys anyway</div>
+  </div>
+
+  <div class="s6-example s6-b fragment">
+    <div class="customer-label">CUSTOMER B</div>
+    <div class="s6-prob magenta">35%</div>
+    <div class="s6-desc">likely to buy</div>
+    <div class="s6-outcome intervention-outcome">
+      coupon changes decision
+    </div>
+  </div>
+
+  <div class="s6-bottom fragment">
+    Predicting <span class="cyan">behavior</span>
+    is not the same as estimating the effect of an
+    <span class="magenta">action.</span>
+  </div>
+
+  <div class="source">
+    SOURCE&nbsp;&nbsp; Kleinberg, Ludwig, Mullainathan &amp; Obermeyer (2015) ·
+    <i>AER</i> 105(5) · p. 491
+  </div>
+
+</div>
+</section>
+<section id="section-6" class="slide level2 project">
+<h2></h2>
+<div class="s7">
+
+  <div class="section-label violet">THE PROJECT</div>
+
+  <div class="s7-title">
+    Now put these questions<br>
+    into <span class="violet">real retail data.</span>
+  </div>
+
+<div class="s7-stat-block s7-households">
+  <div class="s7-big">2,500</div>
+  <div class="s7-stat-copy">
+    FREQUENT-SHOPPER HOUSEHOLDS
+  </div>
+</div>
+
+<div class="s7-stat-block s7-years">
+  <div class="s7-big">2</div>
+  <div class="s7-stat-copy">
+    YEARS OF TRANSACTIONS
+  </div>
+</div>
+
+  <div class="s7-data fragment">
+
+    <div class="s7-data-item">
+      <span>01</span>
+      TRANSACTIONS
+    </div>
+
+    <div class="s7-data-item">
+      <span>02</span>
+      CAMPAIGNS
+    </div>
+
+    <div class="s7-data-item">
+      <span>03</span>
+      COUPONS + REDEMPTION
+    </div>
+
+    <div class="s7-data-item">
+      <span>04</span>
+      DISPLAY + MAILER
+    </div>
+
+  </div>
+
+  <div class="s7-question fragment">
+    Enough to observe marketing exposure.<br>
+    <span class="magenta">Not enough to assume causality.</span>
+  </div>
+
+  <div class="s7-warning fragment">
+    OBSERVED<br>
+    ≠<br>
+    RANDOMIZED
+  </div>
+
+  <div class="source">
+    SOURCE&nbsp;&nbsp; dunnhumby (2023) · <i>The Complete Journey User Guide</i> · pp. 2, 4–6
+  </div>
+
+</div>
+</section>
+<section id="section-7" class="slide level2 framework">
+<h2></h2>
+<div class="s8">
+
+  <div class="s8-title">
+    START WITH<br>
+    THE <span>DECISION.</span>
+  </div>
+
+  <div class="s8-row s8-r1 fragment">
+
+    <div class="row-number">01</div>
+
+    <div class="s8-verb cyan">FORECAST</div>
+
+    <div class="s8-question">
+      What is likely<br>
+      to happen?
+    </div>
+
+    <div class="s8-evidence">
+      TEST
+      <strong>unseen data</strong>
+    </div>
+
+    <div class="s8-method cyan-border">
+      PREDICT
+    </div>
+
+  </div>
+
+  <div class="s8-row s8-r2 fragment">
+
+    <div class="row-number">02</div>
+
+    <div class="s8-verb violet">UNDERSTAND</div>
+
+    <div class="s8-question">
+      Why this<br>
+      output?
+    </div>
+
+    <div class="s8-evidence">
+      TEST
+      <strong>meaningful explanation</strong>
+    </div>
+
+    <div class="s8-method violet-border">
+      EXPLAIN
+    </div>
+
+  </div>
+
+  <div class="s8-row s8-r3 fragment">
+
+    <div class="row-number">03</div>
+
+    <div class="s8-verb magenta">CHANGE</div>
+
+    <div class="s8-question">
+      What will my<br>
+      action change?
+    </div>
+
+    <div class="s8-evidence">
+      NEED
+      <strong>credible counterfactual</strong>
+    </div>
+
+    <div class="s8-method magenta-border">
+      INTERVENE
+    </div>
+
+  </div>
+
+  <div class="s8-bottom fragment">
+    Don't ask <em>"Which model is best?"</em><br>
+    Ask <strong>"Best for what decision?"</strong>
+  </div>
+
+  <div class="source">
+    SYNTHESIS&nbsp;&nbsp; Mullainathan &amp; Spiess (2017) ·
+    NIST (2023) · Kleinberg et al. (2015)
+  </div>
+
+</div>
+</section>
+<section id="section-8" class="slide level2 architecture">
+<h2></h2>
+<div class="s9">
+
+  <div class="s9-small">
+    SO WHICH MODEL WINS?
+  </div>
+
+  <div class="s9-no fragment">
+    NONE.
+  </div>
+
+  <div class="s9-cross fragment"></div>
+
+  <div class="s9-reframe fragment">
+    That's the wrong<br>
+    competition.
+  </div>
+
+  <div class="s9-system fragment">
+
+    <div class="s9-step">
+      <div class="concept-label cyan">PREDICT</div>
+      <div class="s9-copy">
+        find promising<br>
+        opportunities
+      </div>
+    </div>
+
+    <div class="s9-arrow">→</div>
+
+    <div class="s9-step">
+      <div class="concept-label violet">EXPLAIN</div>
+      <div class="s9-copy">
+        understand +<br>
+        govern
+      </div>
+    </div>
+
+    <div class="s9-arrow">→</div>
+
+    <div class="s9-step">
+      <div class="concept-label magenta">INTERVENE</div>
+      <div class="s9-copy">
+        learn what our<br>
+        actions change
+      </div>
+    </div>
+
+  </div>
+
+  <div class="s9-final fragment">
+    Different questions.<br>
+    <strong>Complementary tools.</strong>
+  </div>
+
+  <div class="source">
+    SYNTHESIS&nbsp;&nbsp; Mullainathan &amp; Spiess (2017) ·
+    NIST (2023) · Kleinberg et al. (2015)
+  </div>
+
+</div>
+</section>
+<section id="section-9" class="slide level2 close">
+<h2></h2>
+<div class="s10">
+
+  <div class="s10-small">
+    ONE QUESTION FIRST
+  </div>
+
+  <div class="s10-question">
+    What are we<br>
+    actually deciding?
+  </div>
+
+  <div class="s10-rule"></div>
+
+  <div class="s10-close fragment">
+    MATCH THE <span class="cyan">MODEL</span><br>
+    TO THE <span class="magenta">DECISION.</span>
+  </div>
+
+  <div class="s10-callback fragment">
+    82% likely to buy<br>
+    <span>still doesn't tell us whether to send the coupon.</span>
   </div>
 
 </div>

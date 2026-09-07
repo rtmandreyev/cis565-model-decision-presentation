@@ -15,29 +15,24 @@ $font-family-sans-serif:
 /*-- scss:rules --*/
 
 
-/* =============================================
-   PALETTE
-
-   midnight  #11111b
-   paper     #f5f1f7
-   cyan      #29d9ff
-   magenta   #ff4fd8
-   violet    #8b5cf6
-   ============================================= */
+/* ============================================================
+   GLOBAL DESIGN SYSTEM
+   ============================================================ */
 
 :root {
   --midnight: #11111b;
+
   --paper: #f5f1f7;
+  --soft: #d9d5df;
+  --muted: #aaa5b1;
+  --dim: #777482;
+  --faint: #4b4956;
+
   --cyan: #29d9ff;
+  --violet: #9a7cff;
   --magenta: #ff4fd8;
-  --violet: #8b5cf6;
-  --dim: #8f8d9a;
 }
 
-
-/* =============================================
-   GLOBAL
-   ============================================= */
 
 .reveal {
   font-family:
@@ -52,28 +47,48 @@ $font-family-sans-serif:
   color: var(--paper);
 }
 
+
 .reveal .slides {
   text-align: left;
 }
+
 
 .reveal .slides section {
   box-sizing: border-box;
 }
 
+
 .reveal h2 {
   display: none;
 }
 
-.opening {
+
+/* Every custom slide */
+
+.opening,
+.questions,
+.prediction,
+.explanation,
+.opacity,
+.intervention,
+.project,
+.framework,
+.architecture,
+.close {
   padding: 0 !important;
 }
 
 
-/* =============================================
-   SLIDE 1
-   ============================================= */
-
-.s1 {
+.s1,
+.s2,
+.s3,
+.s4,
+.s5,
+.s6,
+.s7,
+.s8,
+.s9,
+.s10 {
   position: relative;
 
   width: 1600px;
@@ -82,27 +97,111 @@ $font-family-sans-serif:
   overflow: hidden;
 
   background: var(--midnight);
+  color: var(--paper);
 }
 
 
-/* ---- small section marker ---- */
+/* ============================================================
+   SEMANTIC COLORS
+   ============================================================ */
 
-.s1-section {
+.cyan {
+  color: var(--cyan) !important;
+}
+
+.violet {
+  color: var(--violet) !important;
+}
+
+.magenta {
+  color: var(--magenta) !important;
+}
+
+.cyan-bg {
+  background: var(--cyan) !important;
+}
+
+.cyan-border {
+  border-color: var(--cyan) !important;
+}
+
+.violet-border {
+  border-color: var(--violet) !important;
+}
+
+.magenta-border {
+  border-color: var(--magenta) !important;
+}
+
+
+/* ============================================================
+   REUSABLE TYPOGRAPHY
+   ============================================================ */
+
+.section-label {
   position: absolute;
 
-  left: 84px;
-  top: 65px;
+  left: 80px;
+  top: 64px;
 
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 750;
 
   letter-spacing: 4px;
-
-  color: var(--cyan);
 }
 
 
-/* ---- main statement ---- */
+.concept-label {
+  margin-top: 12px;
+
+  font-size: 14px;
+  font-weight: 750;
+
+  letter-spacing: 3px;
+}
+
+
+.micro-label,
+.role-label {
+  font-size: 11px;
+  font-weight: 750;
+
+  letter-spacing: 2.2px;
+
+  color: var(--muted);
+}
+
+
+.source {
+  position: absolute;
+
+  left: 80px;
+  bottom: 34px;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  letter-spacing: .25px;
+
+  color: var(--muted);
+}
+
+
+.disclaimer {
+  position: absolute;
+
+  left: 82px;
+  bottom: 45px;
+
+  font-size: 11px;
+
+  color: var(--dim);
+}
+
+
+/* ============================================================
+   SLIDE 1 — OPENING
+   ============================================================ */
 
 .s1-left {
   position: absolute;
@@ -111,24 +210,14 @@ $font-family-sans-serif:
   top: 165px;
 
   width: 720px;
-}
 
-.s1-line {
   font-size: 74px;
   font-weight: 650;
 
-  line-height: 0.98;
+  line-height: .98;
   letter-spacing: -3.5px;
-
-  color: var(--paper);
 }
 
-.cyan {
-  color: var(--cyan);
-}
-
-
-/* ---- giant probability ---- */
 
 .s1-score {
   position: absolute;
@@ -139,46 +228,45 @@ $font-family-sans-serif:
   width: 450px;
 }
 
+
 .s1-score-number {
   font-size: 190px;
   font-weight: 650;
 
-  line-height: 0.9;
+  line-height: .9;
   letter-spacing: -10px;
 
   color: var(--magenta);
 }
 
+
 .s1-score-caption {
   margin-top: 20px;
 
   font-size: 21px;
-  font-weight: 500;
-
   line-height: 1.2;
 
-  color: var(--paper);
-}
-
-.s1-score-note {
-  position: absolute;
-
-  left: 275px;
-  top: 150px;
-
-  transform: rotate(90deg);
-  transform-origin: left top;
-
-  font-size: 11px;
-  font-weight: 700;
-
-  letter-spacing: 2.5px;
-
-  color: var(--dim);
+  color: var(--soft);
 }
 
 
-/* ---- decision question ---- */
+.illustrative-note {
+  margin-top: 15px;
+
+  font-family:
+    "SFMono-Regular",
+    Menlo,
+    Monaco,
+    monospace;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 1.8px;
+
+  color: var(--muted);
+}
+
 
 .s1-question {
   position: absolute;
@@ -193,67 +281,57 @@ $font-family-sans-serif:
 
   font-size: 47px;
   font-style: italic;
-  font-weight: 400;
 
   line-height: 1.08;
   letter-spacing: -1.3px;
-
-  color: var(--paper);
 }
 
 
-/* ---- yes/no ---- */
-
-.s1-choice-row {
+.s1-options {
   position: absolute;
 
   left: 82px;
-  top: 675px;
+  top: 680px;
 
   display: flex;
 
-  gap: 46px;
-}
+  gap: 48px;
 
-.s1-choice {
-  padding-bottom: 5px;
-
-  border-bottom: 2px solid var(--dim);
-
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 750;
 
   letter-spacing: 2px;
 
-  color: var(--dim);
+  color: var(--soft);
 }
 
 
-/* ---- household ID ---- */
+.s1-options span {
+  padding-bottom: 5px;
 
-.s1-customer {
+  border-bottom: 2px solid var(--faint);
+}
+
+
+.s1-household {
   position: absolute;
 
-  right: 80px;
-  top: 475px;
+  right: 82px;
+  top: 470px;
 
   font-family:
     "SFMono-Regular",
     Menlo,
     Monaco,
-    Consolas,
     monospace;
 
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 12px;
 
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
 
-  color: var(--dim);
+  color: var(--muted);
 }
 
-
-/* ---- answer reveal ---- */
 
 .s1-answer {
   position: absolute;
@@ -264,13 +342,14 @@ $font-family-sans-serif:
   font-size: 94px;
   font-weight: 750;
 
-  line-height: 0.85;
+  line-height: .85;
   letter-spacing: -5px;
 
   color: var(--cyan);
 }
 
-.s1-answer-small {
+
+.s1-answer-note {
   position: absolute;
 
   left: 905px;
@@ -281,7 +360,6 @@ $font-family-sans-serif:
   border-left: 4px solid var(--magenta);
 
   font-size: 19px;
-  font-weight: 500;
 
   line-height: 1.3;
 
@@ -289,34 +367,1241 @@ $font-family-sans-serif:
 }
 
 
-/* ---- disclaimer ---- */
+/* ============================================================
+   SLIDE 2 — THREE QUESTIONS
+   ============================================================ */
 
-.s1-disclaimer {
+.s2-intro {
   position: absolute;
 
-  left: 82px;
-  bottom: 48px;
+  left: 78px;
+  top: 70px;
 
-  font-size: 11px;
-  font-weight: 500;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
 
-  letter-spacing: 0.2px;
-
-  color: #686774;
+  font-size: 48px;
+  font-style: italic;
 }
 
 
-/* =============================================
+.s2-q {
+  position: absolute;
+}
+
+
+.s2-q1 {
+  left: 80px;
+  top: 235px;
+}
+
+
+.s2-q2 {
+  left: 600px;
+  top: 365px;
+}
+
+
+.s2-q3 {
+  right: 85px;
+  top: 515px;
+
+  text-align: right;
+}
+
+
+.s2-question {
+  font-size: 50px;
+  font-weight: 700;
+
+  line-height: 1.02;
+  letter-spacing: -2.2px;
+
+  color: var(--paper);
+}
+
+
+.s2-conclusion {
+  position: absolute;
+
+  left: 78px;
+  bottom: 65px;
+
+  font-size: 24px;
+
+  color: var(--soft);
+}
+
+
+.s2-conclusion strong {
+  color: var(--paper);
+  font-weight: 750;
+}
+
+
+/* ============================================================
+   SLIDE 3 — PREDICTION
+   ============================================================ */
+
+.s3-number {
+  position: absolute;
+
+  left: 72px;
+  top: 165px;
+
+  font-size: 220px;
+  font-weight: 700;
+
+  line-height: .85;
+  letter-spacing: -13px;
+
+  color: var(--cyan);
+}
+
+
+.s3-number-label {
+  position: absolute;
+
+  left: 90px;
+  top: 390px;
+
+  font-size: 20px;
+  line-height: 1.2;
+
+  color: var(--soft);
+}
+
+
+.s3-side {
+  position: absolute;
+
+  left: 800px;
+  top: 160px;
+
+  width: 620px;
+}
+
+
+.s3-side .micro-label {
+  margin-bottom: 14px;
+}
+
+
+.s3-question {
+  font-size: 43px;
+  font-weight: 650;
+
+  line-height: 1.08;
+  letter-spacing: -1.6px;
+}
+
+
+.accent-rule {
+  width: 85px;
+  height: 3px;
+
+  margin: 52px 0;
+}
+
+
+.s3-test {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 38px;
+  font-style: italic;
+
+  line-height: 1.15;
+}
+
+
+.cyan-underline {
+  border-bottom: 5px solid var(--cyan);
+}
+
+
+.s3-flow {
+  position: absolute;
+
+  left: 80px;
+  top: 600px;
+
+  font-family:
+    "SFMono-Regular",
+    Menlo,
+    Monaco,
+    monospace;
+
+  font-size: 16px;
+
+  letter-spacing: 1px;
+
+  color: var(--soft);
+}
+
+
+.arrow {
+  margin: 0 24px;
+
+  color: var(--muted);
+}
+
+
+.s3-punch {
+  position: absolute;
+
+  right: 105px;
+  top: 680px;
+
+  font-size: 25px;
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   SLIDE 4 — EXPLANATION
+   ============================================================ */
+
+.s4-score {
+  position: absolute;
+
+  left: 635px;
+  top: 305px;
+
+  font-size: 150px;
+  font-weight: 650;
+
+  line-height: 1;
+
+  color: var(--paper);
+}
+
+
+.s4-center-label {
+  position: absolute;
+
+  left: 694px;
+  top: 455px;
+
+  font-size: 11px;
+  font-weight: 750;
+
+  letter-spacing: 2.5px;
+
+  color: var(--muted);
+}
+
+
+.s4-prompt {
+  position: absolute;
+}
+
+
+.s4-p1 {
+  left: 90px;
+  top: 215px;
+}
+
+
+.s4-p2 {
+  right: 105px;
+  top: 180px;
+
+  text-align: right;
+}
+
+
+.s4-p3 {
+  left: 195px;
+  top: 555px;
+}
+
+
+.s4-copy {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 33px;
+  font-style: italic;
+
+  line-height: 1.12;
+}
+
+
+.s4-conclusion {
+  position: absolute;
+
+  right: 105px;
+  top: 570px;
+
+  font-size: 36px;
+  font-weight: 650;
+
+  line-height: 1.1;
+
+  text-align: right;
+}
+
+
+/* ============================================================
+   SLIDE 5 — OPACITY
+   ============================================================ */
+
+.s5-title {
+  position: absolute;
+
+  left: 75px;
+  top: 75px;
+
+  font-size: 67px;
+  font-weight: 750;
+
+  line-height: .9;
+  letter-spacing: -3.5px;
+}
+
+
+.s5-case {
+  position: absolute;
+
+  top: 305px;
+
+  width: 480px;
+}
+
+
+.s5-left {
+  left: 90px;
+}
+
+
+.s5-right {
+  right: 105px;
+}
+
+
+.case-number {
+  margin-bottom: 18px;
+
+  font-family:
+    "SFMono-Regular",
+    Menlo,
+    Monaco,
+    monospace;
+
+  font-size: 12px;
+
+  color: var(--muted);
+}
+
+
+.s5-case-name {
+  font-size: 33px;
+  font-weight: 750;
+
+  line-height: 1;
+}
+
+
+.s5-result {
+  margin-top: 26px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 23px;
+  font-style: italic;
+
+  color: var(--soft);
+}
+
+
+.s5-result span {
+  display: block;
+
+  margin-top: 7px;
+}
+
+
+.s5-spectrum {
+  position: absolute;
+
+  left: 590px;
+  top: 370px;
+
+  width: 390px;
+
+  transform: rotate(-6deg);
+}
+
+
+.spectrum-left,
+.spectrum-right {
+  font-size: 10px;
+  font-weight: 750;
+
+  letter-spacing: 1.6px;
+
+  color: var(--muted);
+}
+
+
+.spectrum-right {
+  text-align: right;
+}
+
+
+.spectrum-line {
+  height: 3px;
+
+  margin: 10px 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #777482 0%,
+      #9a7cff 50%,
+      #ff4fd8 100%
+    );
+}
+
+
+.s5-takeaway {
+  position: absolute;
+
+  left: 90px;
+  top: 610px;
+
+  font-size: 28px;
+
+  line-height: 1.22;
+}
+
+
+.crossed {
+  color: var(--muted);
+
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+
+.s5-takeaway strong {
+  color: var(--paper);
+}
+
+
+.s5-rudin {
+  position: absolute;
+
+  right: 105px;
+  top: 620px;
+
+  width: 500px;
+
+  padding-left: 20px;
+
+  border-left: 4px solid var(--violet);
+
+  font-size: 17px;
+
+  line-height: 1.35;
+}
+
+
+/* ============================================================
+   SLIDE 6 — INTERVENTION
+   ============================================================ */
+
+.s6-predict {
+  position: absolute;
+
+  left: 75px;
+  top: 85px;
+
+  font-size: 100px;
+  font-weight: 750;
+
+  line-height: .85;
+  letter-spacing: -5px;
+}
+
+
+.s6-not-equal {
+  position: absolute;
+
+  left: 730px;
+  top: 145px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 110px;
+
+  color: var(--paper);
+}
+
+
+.s6-intervene {
+  position: absolute;
+
+  right: 75px;
+  top: 90px;
+
+  font-size: 68px;
+  font-weight: 700;
+
+  line-height: .93;
+  letter-spacing: -3px;
+
+  text-align: right;
+}
+
+
+.s6-example {
+  position: absolute;
+
+  top: 405px;
+
+  width: 390px;
+}
+
+
+.s6-a {
+  left: 180px;
+}
+
+
+.s6-b {
+  right: 180px;
+}
+
+
+.customer-label {
+  margin-bottom: 15px;
+
+  font-family:
+    "SFMono-Regular",
+    Menlo,
+    Monaco,
+    monospace;
+
+  font-size: 12px;
+
+  letter-spacing: 1.4px;
+
+  color: var(--muted);
+}
+
+
+.s6-prob {
+  font-size: 80px;
+  font-weight: 700;
+
+  line-height: .95;
+  letter-spacing: -4px;
+}
+
+
+.s6-desc {
+  margin-top: 8px;
+
+  font-size: 17px;
+
+  color: var(--soft);
+}
+
+
+.s6-outcome {
+  margin-top: 28px;
+
+  padding-top: 12px;
+
+  border-top: 2px solid var(--faint);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 25px;
+  font-style: italic;
+}
+
+
+.intervention-outcome {
+  border-color: var(--magenta);
+}
+
+
+.s6-bottom {
+  position: absolute;
+
+  left: 300px;
+  bottom: 80px;
+
+  width: 1000px;
+
+  font-size: 25px;
+  font-weight: 550;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   SLIDE 7 — PROJECT
+   ============================================================ */
+
+.s7-title {
+  position: absolute;
+
+  left: 78px;
+  top: 120px;
+
+  font-size: 59px;
+  font-weight: 650;
+
+  line-height: 1.02;
+  letter-spacing: -2.7px;
+}
+
+
+.s7-stat-block {
+  position: absolute;
+
+  top: 330px;
+}
+
+
+.s7-households {
+  left: 80px;
+
+  width: 300px;
+}
+
+
+.s7-years {
+  left: 440px;
+
+  width: 250px;
+}
+
+
+.s7-big {
+  font-size: 105px;
+  font-weight: 700;
+
+  line-height: .85;
+  letter-spacing: -5px;
+
+  color: var(--paper);
+}
+
+
+.s7-stat-copy {
+  margin-top: 18px;
+
+  font-family:
+    "SFMono-Regular",
+    Menlo,
+    Monaco,
+    monospace;
+
+  font-size: 10px;
+  font-weight: 650;
+
+  line-height: 1.3;
+  letter-spacing: 1.4px;
+
+  color: var(--muted);
+}
+
+
+.s7-data {
+  position: absolute;
+
+  left: 790px;
+  top: 145px;
+
+  width: 650px;
+}
+
+
+.s7-data-item {
+  padding: 20px 0;
+
+  border-bottom: 1px solid var(--faint);
+
+  font-size: 25px;
+  font-weight: 650;
+}
+
+
+.s7-data-item span {
+  display: inline-block;
+
+  width: 55px;
+
+  font-family:
+    "SFMono-Regular",
+    Menlo,
+    Monaco,
+    monospace;
+
+  font-size: 11px;
+
+  color: var(--violet);
+}
+
+
+.s7-question {
+  position: absolute;
+
+  left: 80px;
+  top: 585px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 30px;
+  font-style: italic;
+
+  line-height: 1.18;
+}
+
+
+.s7-warning {
+  position: absolute;
+
+  right: 105px;
+  top: 570px;
+
+  font-size: 44px;
+  font-weight: 750;
+
+  line-height: .9;
+
+  text-align: right;
+
+  color: var(--magenta);
+}
+
+
+/* ============================================================
+   SLIDE 8 — FRAMEWORK
+   ============================================================ */
+
+.s8-title {
+  position: absolute;
+
+  left: 75px;
+  top: 62px;
+
+  font-size: 55px;
+  font-weight: 750;
+
+  line-height: .9;
+  letter-spacing: -2.5px;
+}
+
+
+.s8-title span {
+  border-bottom: 6px solid var(--magenta);
+}
+
+
+.s8-row {
+  position: absolute;
+
+  left: 80px;
+
+  display: grid;
+
+  grid-template-columns:
+    70px
+    245px
+    420px
+    330px
+    180px;
+
+  width: 1360px;
+
+  align-items: center;
+
+  padding: 24px 0;
+
+  border-top: 1px solid var(--faint);
+}
+
+
+.s8-r1 {
+  top: 255px;
+}
+
+
+.s8-r2 {
+  top: 405px;
+}
+
+
+.s8-r3 {
+  top: 555px;
+
+  border-bottom: 1px solid var(--faint);
+}
+
+
+.row-number {
+  font-family:
+    "SFMono-Regular",
+    Menlo,
+    Monaco,
+    monospace;
+
+  font-size: 11px;
+
+  color: var(--muted);
+}
+
+
+.s8-verb {
+  font-size: 18px;
+  font-weight: 750;
+
+  letter-spacing: 2px;
+}
+
+
+.s8-question {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 27px;
+  font-style: italic;
+
+  line-height: 1.1;
+}
+
+
+.s8-evidence {
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  color: var(--muted);
+}
+
+
+.s8-evidence strong {
+  display: block;
+
+  margin-top: 6px;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  letter-spacing: 0;
+
+  color: var(--paper);
+}
+
+
+.s8-method {
+  padding: 9px 12px;
+
+  border-left: 3px solid;
+
+  font-size: 13px;
+  font-weight: 750;
+
+  letter-spacing: 2px;
+}
+
+
+.s8-bottom {
+  position: absolute;
+
+  left: 80px;
+  bottom: 57px;
+
+  font-size: 20px;
+
+  line-height: 1.35;
+
+  color: var(--soft);
+}
+
+
+.s8-bottom strong {
+  color: var(--paper);
+}
+
+
+/* ============================================================
+   SLIDE 9 — COMPLEMENTARY TOOLS
+   ============================================================ */
+
+.s9-small {
+  position: absolute;
+
+  left: 78px;
+  top: 70px;
+
+  font-size: 14px;
+  font-weight: 750;
+
+  letter-spacing: 3.2px;
+
+  color: var(--muted);
+}
+
+
+.s9-no {
+  position: absolute;
+
+  left: 75px;
+  top: 145px;
+
+  font-size: 180px;
+  font-weight: 750;
+
+  line-height: .85;
+  letter-spacing: -10px;
+
+  color: var(--magenta);
+}
+
+
+.s9-cross {
+  position: absolute;
+
+  left: 70px;
+  top: 310px;
+
+  width: 520px;
+  height: 5px;
+
+  transform: rotate(-4deg);
+
+  background: var(--paper);
+}
+
+
+.s9-reframe {
+  position: absolute;
+
+  left: 700px;
+  top: 145px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 50px;
+  font-style: italic;
+
+  line-height: 1.05;
+}
+
+
+.s9-system {
+  position: absolute;
+
+  left: 130px;
+  top: 485px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 42px;
+}
+
+
+.s9-step {
+  width: 310px;
+}
+
+
+.s9-copy {
+  font-size: 24px;
+  font-weight: 550;
+
+  line-height: 1.12;
+}
+
+
+.s9-arrow {
+  font-size: 34px;
+
+  color: var(--muted);
+}
+
+
+.s9-final {
+  position: absolute;
+
+  right: 80px;
+  bottom: 72px;
+
+  font-size: 19px;
+
+  text-align: right;
+
+  color: var(--soft);
+}
+
+
+.s9-final strong {
+  color: var(--paper);
+}
+
+
+/* ============================================================
+   SLIDE 10 — CLOSE
+   ============================================================ */
+
+.s10-small {
+  position: absolute;
+
+  left: 80px;
+  top: 72px;
+
+  font-size: 14px;
+  font-weight: 750;
+
+  letter-spacing: 3px;
+
+  color: var(--muted);
+}
+
+
+.s10-question {
+  position: absolute;
+
+  left: 78px;
+  top: 165px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 65px;
+  font-style: italic;
+
+  line-height: 1.03;
+  letter-spacing: -2px;
+}
+
+
+.s10-rule {
+  position: absolute;
+
+  left: 80px;
+  top: 405px;
+
+  width: 120px;
+  height: 5px;
+
+  background: var(--violet);
+}
+
+
+.s10-close {
+  position: absolute;
+
+  left: 530px;
+  top: 385px;
+
+  font-size: 74px;
+  font-weight: 750;
+
+  line-height: .93;
+  letter-spacing: -3.5px;
+}
+
+
+.s10-callback {
+  position: absolute;
+
+  right: 82px;
+  bottom: 65px;
+
+  font-family:
+    "SFMono-Regular",
+    Menlo,
+    Monaco,
+    monospace;
+
+  font-size: 13px;
+
+  line-height: 1.45;
+
+  text-align: right;
+
+  color: var(--cyan);
+}
+
+
+.s10-callback span {
+  color: var(--soft);
+}
+
+
+/* ============================================================
    FRAGMENTS
-   ============================================= */
+   ============================================================ */
 
 .reveal .fragment {
   transition:
-    opacity 0.18s ease,
-    transform 0.18s ease;
+    opacity .18s ease,
+    transform .18s ease;
 }
+
 
 .reveal .fragment:not(.visible) {
   transform: translateY(5px);
 }
 
+/* ============================================================
+   TITLE SLIDE
+   ============================================================ */
+
+#title-slide {
+  text-align: center;
+}
+
+#title-slide .title {
+  font-size: 88px;
+  font-weight: 750;
+
+  line-height: 1;
+  letter-spacing: -4px;
+
+  color: var(--paper);
+}
+
+.title-predict {
+  color: var(--cyan);
+}
+
+.title-explain {
+  color: var(--violet);
+}
+
+.title-intervene {
+  color: var(--magenta);
+}
+
+/* ============================================================
+   HOLDING / TITLE SLIDE
+   ============================================================ */
+
+#title-slide {
+  text-align: left;
+
+  padding-left: 165px !important;
+  padding-top: 145px !important;
+
+  background: var(--midnight);
+}
+
+
+#title-slide .title {
+  margin: 0;
+
+  line-height: 1;
+}
+
+
+.holding-title {
+  display: inline-block;
+
+  font-family:
+    "SFMono-Regular",
+    Menlo,
+    Monaco,
+    Consolas,
+    monospace;
+
+  font-size: 96px;
+  font-weight: 700;
+
+  line-height: .91;
+  letter-spacing: 9px;
+
+  background:
+    linear-gradient(
+      110deg,
+      var(--cyan) 0%,
+      var(--violet) 48%,
+      var(--magenta) 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  color: var(--cyan);
+}
+
+
+#title-slide .subtitle {
+  margin-top: 42px;
+
+  font-family:
+    "SFMono-Regular",
+    Menlo,
+    Monaco,
+    Consolas,
+    monospace;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: var(--muted);
+}
+
+
+/* small visual rail */
+
+#title-slide::after {
+  content: "";
+
+  position: absolute;
+
+  left: 166px;
+  top: 595px;
+
+  width: 105px;
+  height: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--cyan),
+      var(--violet),
+      var(--magenta)
+    );
+}
