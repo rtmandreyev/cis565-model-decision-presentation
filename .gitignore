@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Quarto cache
+.quarto/
+
+# Reveal.js generated dependencies
+presentation_files/

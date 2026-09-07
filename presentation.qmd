@@ -1,0 +1,54 @@
+---
+title: "Predict, Explain, or Intervene?"
+subtitle: "Choosing the right model for a business decision"
+author: "Artyom Andreyev"
+format:
+  revealjs:
+    theme: theme.scss
+    transition: fade
+    background-transition: fade
+    slide-number: false
+    controls: false
+    progress: false
+    center: false
+---
+
+## Our model knows who will buy.
+
+### Does it know who we should target?
+
+**HOUSEHOLD 1847**
+
+High predicted purchase probability
+
+### SEND PROMOTION?
+
+YES / NO
+
+*Illustrative example*
+
+---
+
+## "Should we target them?" hides three questions.
+
+### PREDICT
+
+Will they buy?
+
+### EXPLAIN
+
+Why did the model score them highly?
+
+### INTERVENE
+
+Will our action change what they do?
+
+---
+
+## If you need a forecast, optimize for prediction.
+
+Past customers → **MODEL** → probability → unseen customers
+
+### Did it predict them well?
+
+Source: Mullainathan & Spiess (2017)
