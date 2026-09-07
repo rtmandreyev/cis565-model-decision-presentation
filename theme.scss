@@ -1594,3 +1594,150 @@ $font-family-sans-serif:
       var(--magenta)
     );
 }
+
+/* ============================================================
+   SLIDE 11 — REFERENCES
+   ============================================================ */
+
+.references {
+  padding: 0 !important;
+}
+
+
+.s11 {
+  position: relative;
+
+  width: 1600px;
+  height: 900px;
+
+  overflow: hidden;
+
+  background: var(--midnight);
+  color: var(--paper);
+}
+
+
+.s11-title {
+  position: absolute;
+
+  left: 78px;
+  top: 115px;
+
+  font-size: 68px;
+  font-weight: 750;
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+}
+
+
+.s11-grid {
+  position: absolute;
+
+  left: 80px;
+  top: 245px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  column-gap: 85px;
+  row-gap: 42px;
+
+  width: 1420px;
+}
+
+
+.s11-ref {
+  display: grid;
+
+  grid-template-columns: 48px 1fr;
+
+  gap: 14px;
+
+  align-items: start;
+}
+
+
+.s11-number {
+  padding-top: 3px;
+
+  font-family:
+    "SFMono-Regular",
+    Menlo,
+    Monaco,
+    monospace;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+.s11-author {
+  margin-bottom: 5px;
+
+  font-size: 16px;
+  font-weight: 750;
+
+  color: var(--paper);
+}
+
+
+.s11-title-ref {
+  max-width: 600px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 18px;
+  font-style: italic;
+
+  line-height: 1.15;
+
+  color: var(--soft);
+}
+
+
+.s11-meta {
+  margin-top: 7px;
+
+  font-size: 12px;
+
+  line-height: 1.25;
+
+  color: var(--muted);
+}
+
+
+.s11-link {
+  margin-top: 5px;
+
+  font-family:
+    "SFMono-Regular",
+    Menlo,
+    Monaco,
+    monospace;
+
+  font-size: 10px;
+
+  color: var(--dim);
+}
+
+
+.s11-note {
+  position: absolute;
+
+  left: 80px;
+  bottom: 45px;
+
+  font-size: 11px;
+
+  letter-spacing: .2px;
+
+  color: var(--dim);
+}
