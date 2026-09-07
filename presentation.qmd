@@ -1,54 +1,70 @@
 ---
 title: "Predict, Explain, or Intervene?"
-subtitle: "Choosing the right model for a business decision"
-author: "Artyom Andreyev"
 format:
   revealjs:
     theme: theme.scss
-    transition: fade
-    background-transition: fade
+    transition: none
+    background-transition: none
     slide-number: false
     controls: false
     progress: false
     center: false
+    hash: true
+    width: 1600
+    height: 900
+    margin: 0
 ---
 
-## Our model knows who will buy.
+## {.opening}
 
-### Does it know who we should target?
+```{=html}
+<div class="s1">
 
-**HOUSEHOLD 1847**
+  <div class="s1-section">PERSONALIZED PROMOTIONS</div>
 
-High predicted purchase probability
+  <div class="s1-left">
+    <div class="s1-line">Our model says</div>
+    <div class="s1-line">this household</div>
+    <div class="s1-line">
+      will <span class="cyan">buy.</span>
+    </div>
+  </div>
 
-### SEND PROMOTION?
+  <div class="s1-score">
+    <div class="s1-score-number">82%</div>
+    <div class="s1-score-caption">
+      predicted probability<br>
+      of purchase
+    </div>
+    <div class="s1-score-note">ILLUSTRATIVE</div>
+  </div>
 
-YES / NO
+  <div class="s1-question">
+    Should we send<br>
+    the coupon?
+  </div>
 
-*Illustrative example*
+  <div class="s1-choice-row">
+    <div class="s1-choice">YES</div>
+    <div class="s1-choice">NO</div>
+  </div>
 
----
+  <div class="s1-customer">
+    HOUSEHOLD 1847
+  </div>
 
-## "Should we target them?" hides three questions.
+  <div class="s1-answer fragment">
+    WE DON'T<br>KNOW.
+  </div>
 
-### PREDICT
+  <div class="s1-answer-small fragment">
+    A purchase prediction<br>
+    doesn't answer that decision.
+  </div>
 
-Will they buy?
+  <div class="s1-disclaimer">
+    Illustrative customer and probability — not an empirical result.
+  </div>
 
-### EXPLAIN
-
-Why did the model score them highly?
-
-### INTERVENE
-
-Will our action change what they do?
-
----
-
-## If you need a forecast, optimize for prediction.
-
-Past customers → **MODEL** → probability → unseen customers
-
-### Did it predict them well?
-
-Source: Mullainathan & Spiess (2017)
+</div>
+```

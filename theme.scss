@@ -1,15 +1,12 @@
 /*-- scss:defaults --*/
 
-$body-bg: #f7f5f0;
-$body-color: #17202a;
-
-$presentation-heading-color: #17202a;
-$presentation-heading-font-weight: 650;
+$body-bg: #11111b;
+$body-color: #f5f1f7;
 
 $font-family-sans-serif:
-  -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
+  "Avenir Next",
+  Avenir,
+  "Helvetica Neue",
   Helvetica,
   Arial,
   sans-serif;
@@ -17,26 +14,309 @@ $font-family-sans-serif:
 
 /*-- scss:rules --*/
 
+
+/* =============================================
+   PALETTE
+
+   midnight  #11111b
+   paper     #f5f1f7
+   cyan      #29d9ff
+   magenta   #ff4fd8
+   violet    #8b5cf6
+   ============================================= */
+
+:root {
+  --midnight: #11111b;
+  --paper: #f5f1f7;
+  --cyan: #29d9ff;
+  --magenta: #ff4fd8;
+  --violet: #8b5cf6;
+  --dim: #8f8d9a;
+}
+
+
+/* =============================================
+   GLOBAL
+   ============================================= */
+
 .reveal {
-  font-size: 34px;
+  font-family:
+    "Avenir Next",
+    Avenir,
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  background: var(--midnight);
+  color: var(--paper);
 }
 
 .reveal .slides {
   text-align: left;
 }
 
+.reveal .slides section {
+  box-sizing: border-box;
+}
+
 .reveal h2 {
-  font-size: 1.9em;
-  line-height: 1.05;
-  letter-spacing: -0.035em;
-  margin-bottom: 0.7em;
+  display: none;
 }
 
-.reveal h3 {
-  font-size: 1em;
-  line-height: 1.15;
+.opening {
+  padding: 0 !important;
 }
 
-.reveal p {
-  line-height: 1.35;
+
+/* =============================================
+   SLIDE 1
+   ============================================= */
+
+.s1 {
+  position: relative;
+
+  width: 1600px;
+  height: 900px;
+
+  overflow: hidden;
+
+  background: var(--midnight);
 }
+
+
+/* ---- small section marker ---- */
+
+.s1-section {
+  position: absolute;
+
+  left: 84px;
+  top: 65px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  color: var(--cyan);
+}
+
+
+/* ---- main statement ---- */
+
+.s1-left {
+  position: absolute;
+
+  left: 80px;
+  top: 165px;
+
+  width: 720px;
+}
+
+.s1-line {
+  font-size: 74px;
+  font-weight: 650;
+
+  line-height: 0.98;
+  letter-spacing: -3.5px;
+
+  color: var(--paper);
+}
+
+.cyan {
+  color: var(--cyan);
+}
+
+
+/* ---- giant probability ---- */
+
+.s1-score {
+  position: absolute;
+
+  left: 990px;
+  top: 120px;
+
+  width: 450px;
+}
+
+.s1-score-number {
+  font-size: 190px;
+  font-weight: 650;
+
+  line-height: 0.9;
+  letter-spacing: -10px;
+
+  color: var(--magenta);
+}
+
+.s1-score-caption {
+  margin-top: 20px;
+
+  font-size: 21px;
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  color: var(--paper);
+}
+
+.s1-score-note {
+  position: absolute;
+
+  left: 275px;
+  top: 150px;
+
+  transform: rotate(90deg);
+  transform-origin: left top;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2.5px;
+
+  color: var(--dim);
+}
+
+
+/* ---- decision question ---- */
+
+.s1-question {
+  position: absolute;
+
+  left: 82px;
+  top: 535px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 47px;
+  font-style: italic;
+  font-weight: 400;
+
+  line-height: 1.08;
+  letter-spacing: -1.3px;
+
+  color: var(--paper);
+}
+
+
+/* ---- yes/no ---- */
+
+.s1-choice-row {
+  position: absolute;
+
+  left: 82px;
+  top: 675px;
+
+  display: flex;
+
+  gap: 46px;
+}
+
+.s1-choice {
+  padding-bottom: 5px;
+
+  border-bottom: 2px solid var(--dim);
+
+  font-size: 18px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: var(--dim);
+}
+
+
+/* ---- household ID ---- */
+
+.s1-customer {
+  position: absolute;
+
+  right: 80px;
+  top: 475px;
+
+  font-family:
+    "SFMono-Regular",
+    Menlo,
+    Monaco,
+    Consolas,
+    monospace;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  color: var(--dim);
+}
+
+
+/* ---- answer reveal ---- */
+
+.s1-answer {
+  position: absolute;
+
+  left: 900px;
+  top: 515px;
+
+  font-size: 94px;
+  font-weight: 750;
+
+  line-height: 0.85;
+  letter-spacing: -5px;
+
+  color: var(--cyan);
+}
+
+.s1-answer-small {
+  position: absolute;
+
+  left: 905px;
+  top: 710px;
+
+  padding-left: 20px;
+
+  border-left: 4px solid var(--magenta);
+
+  font-size: 19px;
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  color: var(--paper);
+}
+
+
+/* ---- disclaimer ---- */
+
+.s1-disclaimer {
+  position: absolute;
+
+  left: 82px;
+  bottom: 48px;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  letter-spacing: 0.2px;
+
+  color: #686774;
+}
+
+
+/* =============================================
+   FRAGMENTS
+   ============================================= */
+
+.reveal .fragment {
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+}
+
+.reveal .fragment:not(.visible) {
+  transform: translateY(5px);
+}
+

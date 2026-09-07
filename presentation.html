@@ -6,10 +6,9 @@
 <script src="presentation_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="presentation_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="presentation_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="presentation_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="presentation_files/libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.10.18">
 
-  <meta name="author" content="Artyom Andreyev">
   <title>Predict, Explain, or Intervene?</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -35,7 +34,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/theme/quarto-96bcef8bbdb8f0935da240db03eb7056.css">
+  <link rel="stylesheet" href="presentation_files/libs/revealjs/dist/theme/quarto-9d30103509965cb404860eddfc4e5f8b.css">
   <link href="presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -128,46 +127,68 @@
     }
   </style>
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Predict, Explain, or Intervene?</h1>
-  <p class="subtitle">Choosing the right model for a business decision</p>
 
 <div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Artyom Andreyev
-</div>
-</div>
 </div>
 
 </section>
-<section id="our-model-knows-who-will-buy." class="slide level2">
-<h2>Our model knows who will buy.</h2>
-<h3 id="does-it-know-who-we-should-target">Does it know who we should target?</h3>
-<p><strong>HOUSEHOLD 1847</strong></p>
-<p>High predicted purchase probability</p>
-<h3 id="send-promotion">SEND PROMOTION?</h3>
-<p>YES / NO</p>
-<p><em>Illustrative example</em></p>
-</section>
-<section id="should-we-target-them-hides-three-questions." class="slide level2">
-<h2>“Should we target them?” hides three questions.</h2>
-<h3 id="predict">PREDICT</h3>
-<p>Will they buy?</p>
-<h3 id="explain">EXPLAIN</h3>
-<p>Why did the model score them highly?</p>
-<h3 id="intervene">INTERVENE</h3>
-<p>Will our action change what they do?</p>
-</section>
-<section id="if-you-need-a-forecast-optimize-for-prediction." class="slide level2">
-<h2>If you need a forecast, optimize for prediction.</h2>
-<p>Past customers → <strong>MODEL</strong> → probability → unseen customers</p>
-<h3 id="did-it-predict-them-well">Did it predict them well?</h3>
-<p>Source: Mullainathan &amp; Spiess (2017)</p>
+<section id="section" class="slide level2 opening">
+<h2></h2>
+<div class="s1">
+
+  <div class="s1-section">PERSONALIZED PROMOTIONS</div>
+
+  <div class="s1-left">
+    <div class="s1-line">Our model says</div>
+    <div class="s1-line">this household</div>
+    <div class="s1-line">
+      will <span class="cyan">buy.</span>
+    </div>
+  </div>
+
+  <div class="s1-score">
+    <div class="s1-score-number">82%</div>
+    <div class="s1-score-caption">
+      predicted probability<br>
+      of purchase
+    </div>
+    <div class="s1-score-note">ILLUSTRATIVE</div>
+  </div>
+
+  <div class="s1-question">
+    Should we send<br>
+    the coupon?
+  </div>
+
+  <div class="s1-choice-row">
+    <div class="s1-choice">YES</div>
+    <div class="s1-choice">NO</div>
+  </div>
+
+  <div class="s1-customer">
+    HOUSEHOLD 1847
+  </div>
+
+  <div class="s1-answer fragment">
+    WE DON'T<br>KNOW.
+  </div>
+
+  <div class="s1-answer-small fragment">
+    A purchase prediction<br>
+    doesn't answer that decision.
+  </div>
+
+  <div class="s1-disclaimer">
+    Illustrative customer and probability — not an empirical result.
+  </div>
+
+</div>
 
 </section>
     </div>
@@ -331,14 +352,14 @@ Artyom Andreyev
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'fade',
+        transition: 'none',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'fade',
+        backgroundTransition: 'none',
 
         // Number of slides away from the current that are visible
         viewDistance: 3,
@@ -351,12 +372,12 @@ Artyom Andreyev
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1600,
 
-        height: 700,
+        height: 900,
 
         // Factor of the display size that should remain empty around the content
-        margin: 0.1,
+        margin: 0,
 
         math: {
           mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
