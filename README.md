@@ -4,7 +4,7 @@
 
 Prediction, explanation, and causal intervention answer different questions. A model can rank customers accurately and still be the wrong instrument for the decision in front of you. This presentation develops that argument through a single case — personalized promotions — and closes on a practical rule: match the model to the decision, not the reverse.
 
-**Live site:** <https://rtmandreyev.github.io/predict-explain-intervene/>
+**View the live presentation:** <https://rtmandreyev.github.io/predict-explain-intervene/>
 
 **Repository:** <https://github.com/rtmandreyev/predict-explain-intervene>
 
@@ -57,7 +57,7 @@ quarto render presentation.qmd    # writes presentation.html
 
 `presentation_files/` is Quarto's generated asset directory and is gitignored, so a fresh clone must be rendered before `presentation.html` will display correctly on its own. To view an already-rendered copy without Quarto, serve the directory over a local server (for example `python3 -m http.server`) and open the HTML — the deck loads its assets relatively.
 
-GitHub Pages publishes this repository at <https://rtmandreyev.github.io/predict-explain-intervene/> — a legacy Jekyll build from `main`, which serves this README as the site index. Because `presentation_files/` is gitignored and therefore not part of the published site, open `presentation.html` from a local render rather than from the site URL.
+GitHub Pages publishes the presentation itself at <https://rtmandreyev.github.io/predict-explain-intervene/>. The site is built by a GitHub Actions workflow (`.github/workflows/publish.yml`), which renders `presentation.qmd` with Quarto and deploys the result as the site root; the `presentation_files/` assets are generated during the build and are not committed.
 
 ## Sources
 

@@ -1,0 +1,64 @@
+name: Publish presentation
+
+# Renders the Reveal.js deck from source and publishes it to GitHub Pages,
+# with the presentation itself as the site root (index.html).
+#
+# The generated presentation_files/ assets are intentionally NOT committed to
+# main; this workflow produces them on every run and deploys only the artifact.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time; never cancel a run that is already publishing.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          # Pinned to the version this deck was authored and verified against.
+          quarto-version: "1.10.18"
+
+      - name: Render the presentation as the site root
+        run: |
+          quarto render presentation.qmd --output-dir _site --output index.html
+
+      - name: Check the build produced a complete deck
+        run: |
+          test -f _site/index.html
+          test -d _site/presentation_files/libs/revealjs/dist
+          test -f _site/presentation_files/libs/revealjs/dist/reveal.js
+          test -f _site/presentation_files/libs/revealjs/dist/reveal.css
+          echo "Deck and Reveal.js assets present:"
+          du -sh _site
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
