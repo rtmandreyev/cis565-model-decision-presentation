@@ -4,7 +4,9 @@
 
 Prediction, explanation, and causal intervention answer different questions. A model can rank customers accurately and still be the wrong instrument for the decision in front of you. This presentation develops that argument through a single case — personalized promotions — and closes on a practical rule: match the model to the decision, not the reverse.
 
-**Repository:** <https://github.com/rtmandreyev/cis565-model-decision-presentation>
+**Live site:** <https://rtmandreyev.github.io/predict-explain-intervene/>
+
+**Repository:** <https://github.com/rtmandreyev/predict-explain-intervene>
 
 ---
 
@@ -46,8 +48,8 @@ The deck is a dark 1600×900 layout with fixed color semantics carried across ev
 Requires [Quarto](https://quarto.org). This output was rendered with Quarto 1.10.18.
 
 ```bash
-git clone https://github.com/rtmandreyev/cis565-model-decision-presentation.git
-cd cis565-model-decision-presentation
+git clone https://github.com/rtmandreyev/predict-explain-intervene.git
+cd predict-explain-intervene
 
 quarto preview presentation.qmd   # live preview while editing
 quarto render presentation.qmd    # writes presentation.html
@@ -55,7 +57,7 @@ quarto render presentation.qmd    # writes presentation.html
 
 `presentation_files/` is Quarto's generated asset directory and is gitignored, so a fresh clone must be rendered before `presentation.html` will display correctly on its own. To view an already-rendered copy without Quarto, serve the directory over a local server (for example `python3 -m http.server`) and open the HTML — the deck loads its assets relatively.
 
-No hosted version is published: GitHub Pages is not currently enabled for this repository.
+GitHub Pages publishes this repository at <https://rtmandreyev.github.io/predict-explain-intervene/> — a legacy Jekyll build from `main`, which serves this README as the site index. Because `presentation_files/` is gitignored and therefore not part of the published site, open `presentation.html` from a local render rather than from the site URL.
 
 ## Sources
 
