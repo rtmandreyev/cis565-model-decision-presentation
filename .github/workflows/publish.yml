@@ -32,7 +32,8 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           # Pinned to the version this deck was authored and verified against.
-          quarto-version: "1.10.18"
+          # NOTE: the input is `version`; `quarto-version` is silently ignored.
+          version: "1.10.18"
 
       - name: Render the presentation as the site root
         run: |
