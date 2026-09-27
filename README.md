@@ -30,7 +30,7 @@ The discussion is then grounded in a real retail dataset: dunnhumby's *The Compl
 
 The central illustration is a two-customer comparison. Customer A carries a 90% predicted purchase probability and buys anyway — the coupon made no difference, even though the prediction was correct. Customer B carries a 35% predicted probability, and the coupon changes the decision. Ranked by purchase probability, an offer goes to A and skips B; only the estimated effect of the action identifies the customer worth persuading. Predicting behavior is not the same as estimating the effect of an action.
 
-Neither figure is an empirical result. The opening slide labels its score "ILLUSTRATIVE SCORE" and carries the disclaimer that the illustrative customer and probability are not an empirical result; the two customer probabilities on the intervention slide belong to the same hypothetical example. The dataset characteristics come from the dunnhumby documentation. The presentation does not fit, train, or evaluate a model; it is an argument about which kind of model a decision requires.
+None of these numbers is an empirical result. The opening slide labels its 82% score "ILLUSTRATIVE SCORE" and carries the disclaimer that the illustrative customer and probability are not an empirical result; the 90% and 35% figures on the intervention slide belong to the same hypothetical example. The dataset characteristics come from the dunnhumby documentation. The presentation does not fit, train, or evaluate a model; it is an argument about which kind of model a decision requires.
 
 ## Design and implementation
 
