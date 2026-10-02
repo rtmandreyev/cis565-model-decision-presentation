@@ -8,6 +8,8 @@ Prediction, explanation, and causal intervention answer different questions. A m
 
 **Repository:** <https://github.com/rtmandreyev/predict-explain-intervene>
 
+![The title slide: PREDICT · EXPLAIN · INTERVENE — Model choice for business decisions](assets/readme/title-slide.png)
+
 ---
 
 ## Overview
